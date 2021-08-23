@@ -1,0 +1,504 @@
+header {
+    font-size: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    display: block;
+    background: #161616;
+}
+
+h1 {
+    display: block;
+    font-size: 60px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    padding: 30px;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+body {
+    margin-block-start: 0px;
+    display: block;
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    background-color: #827D7D;
+    border: 2px solid black;
+}
+
+nav li {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav a {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #161616;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+nav a:target{
+    color: white;
+}
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #827D7D;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  color: #161616;
+  text-align: center;
+  
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn, .dropbtn_active {
+  font-family: sans-serif;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: #161616;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+/* Text im Dropdownmenü*/
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn_active {
+  color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #827D7D;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: #161616;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #827D7D;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Der Reiter der Seite in der navigationsleiste wird markiert, wenn man sich auf der jeweiligen Seite befindet*/
+.active {
+    color: white;
+}
+/*div inhalt einer Seite*/
+.inhalt {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+/*Tabelle Detailansicht (Tagesansicht)*/
+.tasks#details{
+  margin-top: 50px;
+}
+
+.tasks#details tr.nameAndDate th{
+  text-align: center;
+}
+
+/*CSS Styling Kalender: Der Kalender ist in der class= "calendar"*/
+table.calendar, table.tasks {
+    font-family: "Arial Black", Gadget, sans-serif;
+    color:#161616;
+    border: 1px solid #FFFFFF;
+    /*width: 350px;
+    height: 200px;*/
+    text-align: center;
+    border-collapse: collapse;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  /*Tabellenkopf mit KW und den Namen der Wochentage*/
+  table.calendar thead, table.tasks thead{
+    color: white;
+    background: #161616;
+    border-bottom: 5px solid #FFFFFF;
+  }
+  /*Alle Tabellenfelder*/
+  table.calendar td, table.calendar th, table.tasks td, table.tasks th {
+    border: 1px solid #000000;
+    padding: 10px 10px;
+  }
+  /*Alle Tabellenfelder im Body der Tabelle ohne den Tabellenkopf*/
+  table.calendar tbody td, table.tasks tbody td {
+    font-size: 13px;
+    vertical-align: top;
+    text-align: left;
+    height: 50px;
+    width: 50px;
+  }
+/*SVG Elemente in der Tabelle*/
+  table.calendar tbody td svg {
+    vertical-align: top;
+    position: relative;
+    left:50%;
+    bottom: 10%;
+    width: 30px;
+    height: 30px;
+  }
+
+  /*Die Tabellenfelder im Tabellenkopf*/
+  table.calendar thead th, table.tasks thead th {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    width: 100px;
+  }
+  /*Erstes Element des Tabellenkopfs: Kein linker Rand*/
+  table.calendar thead th:first-child, table.tasks thead th:first-child {
+    border-left: none;
+  }
+  /*Die erste Spalte des Table Body: Die Felder sind in der Klasse cwColumn (calendarweek) */
+  table.calendar .cwColumn {
+      background: #161616;
+      color: white;
+      vertical-align:middle;
+      text-align: center;
+      width: 50px;
+      border: 1px solid white;
+      border-top: 2px solid white;
+  }
+  /*Der aktuelle Tag wird hervorgehoben*/
+  table.calendar .today {
+    border-collapse: separate;
+    border: 2px solid red;
+}
+  table.calendar .weekend {
+    color: darkgrey;
+    background-color: lightgrey;
+  }
+
+/*Jahresansicht mit linken Rand*/
+table.calendar#year thead th:first-child {
+    border-left: 1px solid black;
+ }
+/*Jahresansicht, Tabellenkopf weißer Rand*/
+ table.calendar#year thead th{
+  border: 1px solid #FFFFFF;
+}
+/*Jahreskalender*/
+table.calendar#year tbody tr td{
+  text-align: center;
+  vertical-align: middle;
+  height: 20px;
+  padding: 5px 5px;
+}
+/*Jahreskalender*/
+table.calendar#year tbody tr td svg{
+  left:5%;
+  bottom: 45%
+}
+
+/*Jahreskalender*/
+table.calendar#year tbody tr td.monthCapacity{
+  background-color: #161616;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+/*Jahreskalender*/
+table.calendar#year tbody tr td.monthCapacity:hover{
+  background-color: #161616;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+/*Jahreskalender*/
+table.calendar#year tbody tr td:first-child{
+  background-color: #161616;
+  color: #FFFFFF;
+}
+/*Links im Kalender*/
+table.calendar tbody td a:link {
+  text-decoration: none;
+  color: #161616;
+  width: 100%;
+  height: 50%;
+  display: block;
+}
+/*Links im Kalender*/
+table.calendar tbody td a:visited, table.tasks tbody td a:visited {
+  text-decoration: none;
+  color: #161616;
+}
+
+/*Links in der Aufgabentabelle (details.php)*/
+table.tasks tbody td a:hover{
+  color: rgb(13, 13, 173);;
+}
+
+
+  /*Formular zum eingeben von Monat, Jahr...*/
+  form {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+
+  /*Button zum absenden von Formularen*/
+  input[type="submit"], .submit_button{
+    font-family: "Arial Black", Gadget, sans-serif;
+    background-color: #161616;
+    border-radius: 10px;
+    border: 2px solid #161616;
+    color: white;
+    text-align: center;
+    padding: 4px 15px;
+    display: inline-block;
+    font-size: 9px;
+    margin-left: 10px;
+  }
+/*Button zum absenden von Formularen*/
+  input[type="submit"]:hover, .submit_button:hover{
+    border: 2px solid #161616;
+    background-color: white;
+    color: #161616;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black;
+  }
+/*Speicherknopf innerhalb von Tabellen*/
+  table tr td.button {
+    
+    text-align: center;
+    border: none;
+  }
+  table tr th.button {
+    
+    text-align: center;
+    border: none;
+    background-color: white;
+  }
+
+  
+/*Benutzerauswahl des Monats und des Jahres*/
+  input[type="month"], Select, .inputDate{
+    font-family: "Arial Black", Gadget, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #161616;
+    color: black;
+    text-align: center;
+    padding: 4px 15px;
+    display: inline-block;
+    font-size: 9px;
+  }
+  /*Eingabefeld Monat*/
+  input[type="month"]:hover{
+    cursor: pointer;
+  }
+  /*Benutzerauswahl des Mitarbeiters*/
+  .multiselect, .select{
+    font-size: 12px;
+    text-align: left;
+    margin-right: 10px;
+    border-radius: 2px;
+    height: 50px;
+  }
+
+  .multiselect option:checked{
+    background-color: black;
+    color: white;
+  }
+
+  .select{
+    height: 30px;
+  }
+
+  
+/*Tabelle für Aufgaben*/
+  table.tasks thead th{
+    width:50px
+  }
+
+
+  table.tasks tr td{
+    width:1px;
+    height: 1px;
+    vertical-align: middle;
+  }
+
+  table.tasks th.tasksID, table.tasks td input.tasksID {
+    width: 20px;
+    border: 1px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color:#161616;
+    margin: 10px;
+  }
+
+  table.tasks td input.tasks, table.tasks td input.tasksCapacity{ 
+    border: 1px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color:#161616;
+  }
+  table.tasks td input.tasksCapacity{
+    width: 43px;
+  }
+
+/*Neue Aufgabe die man anlegt in grau anzeigen
+ Auswahlfeld des Mitarbeiters*/
+.newTaskSelectWorker{
+  color: grey;
+  border: 2px solid grey;
+  border-radius: 0px;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 12px;
+}
+/*Eingabefelder für Aufgabentitel, Kapazität, und Endtermin bei neuen Aufgaben*/
+table.tasks td input.newTasks{
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 13px;
+  background-color: white;
+  width:150px; 
+  border: 0px;
+  color: grey;
+  text-align: center;
+  padding: 4px 15px;
+  display: inline-block;
+  font-size: 9px;
+}
+/*Eingabefeld der Kapazität (neue Aufgaben)*/
+table.tasks td input.newTasksCapacity {
+  font-family: "Arial Black", Gadget, sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  border: 0px solid grey;
+  width: 30px;
+}
+/*
+  .save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+*/
+  /*Warntext, wenn bspw. Formulareingaben unvollständig sind*/
+  .alert{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 10px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*Bestätigungstext bspw. beim erfolgreichen Speichern*/
+  .affirm{
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 10px;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  /*Füllstand Anzeige*/
+  rect.greenrect{
+    fill:url(#greenfill);
+  }
+
+  rect.redrect{
+    fill:url(#redfill);
+  }
+
+  rect.yellowrect{
+    fill:url(#yellowfill);
+  }
+
+  rect.magentarect{
+    fill:url(#magentafill);
+  }
+
+/*Legende für die Füllstandsanzeige*/  
+
+div.legende{
+  float: left;
+  width: 140px;
+}
+
+.legende table {
+  font-size: 13px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  color:#161616;
+}
+
+.legende table th {
+  font-size: 18px;
+}
+
+.legende table td svg {
+  width: 30px;
+  height: 30px;
+}
